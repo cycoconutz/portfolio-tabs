@@ -132,7 +132,10 @@ export const projects: Project[] = [
       'Shipped by a team of three on a deadline',
     ],
     tech: ['JavaScript', 'React', 'Express', 'MongoDB'],
-    links: [{ label: 'View source', href: 'https://github.com/cycoconutz/Karmatic', kind: 'repo' }],
+    links: [
+      { label: 'Visit live site', href: 'https://karmatic.onrender.com/', kind: 'live' },
+      { label: 'View source', href: 'https://github.com/cycoconutz/Karmatic', kind: 'repo' },
+    ],
     theme: 'karmatic',
     wipe: 'crt',
   },

@@ -523,13 +523,13 @@ button {
 /* --------------------------------------------------------- flourishes --- */
 
 [data-project='deadwax'] .flourish {
-  opacity: 0.3;
-  background-image: radial-gradient(var(--fg) 1.2px, transparent 1.3px);
+  opacity: 0.16;
+  background-image: radial-gradient(var(--muted) 1.15px, transparent 1.3px);
   background-size: 9px 9px;
 }
 
 [data-project='vault'] .flourish {
-  opacity: 0.45;
+  opacity: 0.18;
   background-image: linear-gradient(var(--border) 1px, transparent 1px),
     linear-gradient(90deg, var(--border) 1px, transparent 1px);
   background-size: 50px 50px;
@@ -575,7 +575,7 @@ button {
 }
 
 [data-theme='deadwax'] .project-name {
-  color: var(--accent);
+  color: #c9361f;
 }
 
 [data-theme='solace'] .project-name {
