@@ -43,6 +43,23 @@ export function ProjectPage() {
         </div>
       </header>
 
+      {(() => {
+        const live = project.links.find((link) => link.kind === 'live')
+        if (!live) return null
+        return (
+          <a
+            className="project-shot"
+            href={live.href}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`Open ${project.name} live demo`}
+          >
+            <img src={project.shot} alt={`${project.name} homepage`} />
+            <span className="shot-label">Open live demo ↗</span>
+          </a>
+        )
+      })()}
+
       <section className="project-body">
         <div className="project-copy">
           <p className="section-kicker">Overview</p>

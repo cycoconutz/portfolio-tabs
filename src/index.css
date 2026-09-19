@@ -422,6 +422,68 @@ button {
   border-color: var(--accent);
 }
 
+.project-shot {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin-top: 4rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s var(--ease), border-color 0.3s var(--ease),
+    box-shadow 0.3s var(--ease);
+}
+
+.project-shot::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: color-mix(in srgb, var(--bg) 40%, transparent);
+  opacity: 0;
+  transition: opacity 0.3s var(--ease);
+}
+
+.project-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.project-shot:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow), 0 18px 40px -20px color-mix(in srgb, var(--accent) 35%, transparent);
+}
+
+.project-shot:hover::after {
+  opacity: 1;
+}
+
+.shot-label {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  padding: 0.75rem 1.5rem;
+  transform: translate(-50%, -50%);
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: var(--bg);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s var(--ease);
+}
+
+.project-shot:hover .shot-label {
+  opacity: 1;
+}
+
 .project-body {
   display: grid;
   grid-template-columns: 1.6fr 1fr;

@@ -1,4 +1,9 @@
 import type { WipeId } from '../transitions/wipes'
+import deadwaxShot from '../assets/shots/deadwax.png'
+import twilightShot from '../assets/shots/twilightvotes.png'
+import vaultShot from '../assets/shots/vault.png'
+import solaceShot from '../assets/shots/solace.png'
+import karmaticShot from '../assets/shots/karmatic.png'
 
 export interface ProjectLink {
   label: string
@@ -18,6 +23,7 @@ export interface Project {
   highlights: string[]
   tech: string[]
   links: ProjectLink[]
+  shot: string
   theme: string
   wipe: WipeId
 }
@@ -46,6 +52,7 @@ export const projects: Project[] = [
       { label: 'Visit live demo', href: 'https://deadwax-exee.onrender.com/', kind: 'live' },
       { label: 'View source', href: 'https://github.com/cycoconutz/deadwax', kind: 'repo' },
     ],
+    shot: deadwaxShot,
     theme: 'deadwax',
     wipe: 'riso',
   },
@@ -67,6 +74,7 @@ export const projects: Project[] = [
     ],
     tech: ['React', 'TypeScript', 'Tailwind CSS', 'TanStack Query'],
     links: [{ label: 'Visit live site', href: 'https://www.twilightvotes.com/', kind: 'live' }],
+    shot: twilightShot,
     theme: 'twilight',
     wipe: 'agenda',
   },
@@ -91,6 +99,7 @@ export const projects: Project[] = [
       { label: 'Visit live site', href: 'https://cycoconutz.github.io/vault/', kind: 'live' },
       { label: 'View source', href: 'https://github.com/cycoconutz/vault', kind: 'repo' },
     ],
+    shot: vaultShot,
     theme: 'vault',
     wipe: 'scanline',
   },
@@ -115,6 +124,7 @@ export const projects: Project[] = [
       { label: 'Visit live site', href: 'https://cycoconutz.github.io/solace/', kind: 'live' },
       { label: 'View source', href: 'https://github.com/cycoconutz/solace', kind: 'repo' },
     ],
+    shot: solaceShot,
     theme: 'solace',
     wipe: 'bloom',
   },
@@ -139,6 +149,7 @@ export const projects: Project[] = [
       { label: 'Visit live site', href: 'https://karmatic.onrender.com/', kind: 'live' },
       { label: 'View source', href: 'https://github.com/cycoconutz/Karmatic', kind: 'repo' },
     ],
+    shot: karmaticShot,
     theme: 'karmatic',
     wipe: 'crt',
   },
