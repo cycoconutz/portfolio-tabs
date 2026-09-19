@@ -8,9 +8,9 @@ import { TransitionProvider } from './transitions/TransitionProvider'
 
 const fallback = {
   theme: 'hub',
-  title: 'John Yates — Full-stack Web Developer',
+  title: 'Project Catalog — Selected Work',
   description:
-    'Portfolio of John Yates: full-stack web developer building React front-ends, Node APIs and everything in between.',
+    'A catalog of web projects, each built with its own design language and its own way of arriving on screen.',
 }
 
 function metaFor(pathname: string) {
@@ -20,7 +20,7 @@ function metaFor(pathname: string) {
     if (project) {
       return {
         theme: project.theme,
-        title: `${project.name} — John Yates`,
+        title: `${project.name} — Project Catalog`,
         description: project.tagline,
       }
     }

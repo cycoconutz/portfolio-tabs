@@ -5,12 +5,12 @@ export function IndexPage() {
   return (
     <main className="index-page">
       <header className="index-hero">
-        <p className="eyebrow">Portfolio / Full-stack web developer</p>
+        <p className="eyebrow">Project catalog</p>
         <h1 className="index-title">
-          John Yates
+          The Catalog
         </h1>
         <p className="index-lede">
-          Five projects, five identities. Every build below gets its own design language and its
+          Five builds, five identities. Every project below gets its own design language and its
           own way of arriving on screen. Pick a tab and watch the page turn.
         </p>
       </header>
@@ -37,7 +37,7 @@ export function IndexPage() {
       </section>
 
       <footer className="index-foot">
-        <a href="mailto:johndyates@gmail.com">johndyates@gmail.com</a>
+        <a href="https://www.johndyates.com">The full portfolio</a>
         <span>Built with React, one theme per tab.</span>
       </footer>
     </main>

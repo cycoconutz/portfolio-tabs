@@ -14,8 +14,8 @@ export function TabSpine() {
         transition={{ wipe: 'bloom', theme: 'hub' }}
         className={`spine-brand${activeSlug === '' ? ' is-active' : ''}`}
       >
-        <span className="spine-brand-mark">JY</span>
-        <span className="spine-brand-name">John Yates</span>
+        <span className="spine-brand-mark">PC</span>
+        <span className="spine-brand-name">Project Catalog</span>
       </TransitionLink>
 
       <ol className="spine-list">
@@ -37,11 +37,11 @@ export function TabSpine() {
       </ol>
 
       <div className="spine-foot">
+        <a className="spine-link" href="https://www.johndyates.com" target="_blank" rel="noreferrer">
+          Portfolio
+        </a>
         <a className="spine-link" href="https://github.com/cycoconutz" target="_blank" rel="noreferrer">
           GitHub
-        </a>
-        <a className="spine-link" href="https://www.linkedin.com/in/danny-yates/" target="_blank" rel="noreferrer">
-          LinkedIn
         </a>
       </div>
     </nav>

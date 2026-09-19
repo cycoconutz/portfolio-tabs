@@ -42,7 +42,10 @@ export const projects: Project[] = [
       'Admin summary, user, listing and review moderation routes behind a role hook',
     ],
     tech: ['TypeScript', 'React', 'Fastify', 'PostgreSQL', 'Drizzle ORM', 'Zod'],
-    links: [{ label: 'View source', href: 'https://github.com/cycoconutz/deadwax', kind: 'repo' }],
+    links: [
+      { label: 'Visit live demo', href: 'https://deadwax-exee.onrender.com/', kind: 'live' },
+      { label: 'View source', href: 'https://github.com/cycoconutz/deadwax', kind: 'repo' },
+    ],
     theme: 'deadwax',
     wipe: 'riso',
   },
