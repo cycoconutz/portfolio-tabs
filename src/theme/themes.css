@@ -1,0 +1,104 @@
+/* Each project gets its own token set. The attribute selector matches both the
+   document root (active page) and the curtain overlay (destination theme). */
+
+[data-theme='hub'] {
+  --bg: #0b0e13;
+  --bg-2: #11151c;
+  --fg: #e8edf4;
+  --muted: #7c8798;
+  --accent: #5eead4;
+  --accent-2: #f472b6;
+  --border: rgba(255, 255, 255, 0.08);
+  --card: #131922;
+  --radius: 6px;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --display-transform: none;
+  --shadow: 0 24px 60px -30px rgba(0, 0, 0, 0.7);
+}
+
+[data-theme='twilight'] {
+  --bg: #0a0920;
+  --bg-2: #131034;
+  --fg: #ece9ff;
+  --muted: #8b86c0;
+  --accent: #8b7bff;
+  --accent-2: #f5c451;
+  --border: rgba(139, 123, 255, 0.24);
+  --card: #161338;
+  --radius: 14px;
+  --font-display: 'Orbitron', sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --display-transform: uppercase;
+  --shadow: 0 0 70px -12px rgba(139, 123, 255, 0.45);
+}
+
+[data-theme='vault'] {
+  --bg: #d9d6ce;
+  --bg-2: #e8e5dd;
+  --fg: #0a0a0a;
+  --muted: #55534d;
+  --accent: #ff3b00;
+  --accent-2: #0a0a0a;
+  --border: #0a0a0a;
+  --card: #e8e5dd;
+  --radius: 0px;
+  --font-display: 'Archivo Black', sans-serif;
+  --font-body: 'Archivo', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --display-transform: uppercase;
+  --shadow: 8px 8px 0 #0a0a0a;
+}
+
+[data-theme='solace'] {
+  --bg: #f3f0fb;
+  --bg-2: #eae4fa;
+  --fg: #3b3556;
+  --muted: #827a9f;
+  --accent: #7c6cf0;
+  --accent-2: #f7a8c4;
+  --border: rgba(124, 108, 240, 0.2);
+  --card: rgba(255, 255, 255, 0.66);
+  --radius: 26px;
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Quicksand', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --display-transform: none;
+  --shadow: 0 30px 80px -30px rgba(124, 108, 240, 0.5);
+}
+
+[data-theme='deadwax'] {
+  --bg: #f4efe6;
+  --bg-2: #ece4d6;
+  --fg: #16130f;
+  --muted: #6b6357;
+  --accent: #e5402f;
+  --accent-2: #2442c8;
+  --border: #16130f;
+  --card: #efe7da;
+  --radius: 0px;
+  --font-display: 'Anton', sans-serif;
+  --font-body: 'Work Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --display-transform: uppercase;
+  --shadow: 6px 6px 0 #16130f;
+}
+
+[data-theme='karmatic'] {
+  --bg: #040704;
+  --bg-2: #07100a;
+  --fg: #a8ffc4;
+  --muted: #4f8a63;
+  --accent: #39ff88;
+  --accent-2: #ff4fd8;
+  --border: rgba(57, 255, 136, 0.26);
+  --card: #061009;
+  --radius: 2px;
+  --font-display: 'VT323', monospace;
+  --font-body: 'Share Tech Mono', monospace;
+  --font-mono: 'Share Tech Mono', monospace;
+  --display-transform: uppercase;
+  --shadow: 0 0 44px -8px rgba(57, 255, 136, 0.55);
+}

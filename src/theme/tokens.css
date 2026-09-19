@@ -1,0 +1,18 @@
+:root {
+  --bg: #0b0e13;
+  --bg-2: #11151c;
+  --fg: #e8edf4;
+  --muted: #7c8798;
+  --accent: #5eead4;
+  --accent-2: #f472b6;
+  --border: rgba(255, 255, 255, 0.08);
+  --card: #131922;
+  --radius: 6px;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --display-transform: none;
+  --shadow: 0 24px 60px -30px rgba(0, 0, 0, 0.7);
+  --pad: clamp(1.5rem, 5vw, 5.5rem);
+  --ease: cubic-bezier(0.7, 0, 0.2, 1);
+}
