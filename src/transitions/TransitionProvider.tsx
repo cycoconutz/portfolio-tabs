@@ -21,7 +21,6 @@ export function TransitionProvider({ children }: { children: ReactNode }) {
   const [phase, setPhase] = useState<Phase>('idle')
   const [wipe, setWipe] = useState<WipeId>('bloom')
   const [theme, setTheme] = useState('hub')
-  const [label, setLabel] = useState('')
   const [origin, setOrigin] = useState<{ x: number; y: number } | null>(null)
   const busy = useRef(false)
   const timers = useRef<number[]>([])
@@ -43,7 +42,6 @@ export function TransitionProvider({ children }: { children: ReactNode }) {
       busy.current = true
       setWipe(options.wipe)
       setTheme(options.theme)
-      setLabel(options.label)
       setOrigin(options.origin ?? null)
       setPhase('cover')
       timers.current.push(
@@ -67,7 +65,7 @@ export function TransitionProvider({ children }: { children: ReactNode }) {
   return (
     <TransitionContext.Provider value={value}>
       {children}
-      <Curtain phase={phase} wipe={wipe} theme={theme} label={label} origin={origin} />
+      <Curtain phase={phase} wipe={wipe} theme={theme} origin={origin} />
     </TransitionContext.Provider>
   )
 }

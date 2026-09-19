@@ -1,5 +1,4 @@
 import { projects } from '../data/projects'
-import { wipeNames } from '../transitions/wipes'
 import { TransitionLink } from '../components/TransitionLink'
 
 export function IndexPage() {
@@ -21,7 +20,7 @@ export function IndexPage() {
           <TransitionLink
             key={project.slug}
             to={`/work/${project.slug}`}
-            transition={{ wipe: project.wipe, theme: project.theme, label: project.name }}
+            transition={{ wipe: project.wipe, theme: project.theme }}
             className="tile"
           >
             <span className="tile-index">{project.index}</span>
@@ -33,7 +32,6 @@ export function IndexPage() {
                 <li key={tech}>{tech}</li>
               ))}
             </ul>
-            <span className="tile-wipe">▸ {wipeNames[project.wipe]}</span>
           </TransitionLink>
         ))}
       </section>

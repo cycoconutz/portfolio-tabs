@@ -11,7 +11,7 @@ export function TabSpine() {
     <nav className="spine" aria-label="Projects">
       <TransitionLink
         to="/"
-        transition={{ wipe: 'bloom', theme: 'hub', label: 'Index' }}
+        transition={{ wipe: 'bloom', theme: 'hub' }}
         className={`spine-brand${activeSlug === '' ? ' is-active' : ''}`}
       >
         <span className="spine-brand-mark">JY</span>
@@ -23,7 +23,7 @@ export function TabSpine() {
           <li key={project.slug}>
             <TransitionLink
               to={`/work/${project.slug}`}
-              transition={{ wipe: project.wipe, theme: project.theme, label: project.name }}
+              transition={{ wipe: project.wipe, theme: project.theme }}
               className={`spine-item${activeSlug === project.slug ? ' is-active' : ''}`}
             >
               <span className="spine-num">{project.index}</span>

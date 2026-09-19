@@ -312,15 +312,6 @@ button {
   color: var(--muted);
 }
 
-.tile-wipe {
-  margin-top: 1.1rem;
-  font-family: var(--font-mono);
-  font-size: 0.64rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--accent);
-}
-
 .index-foot {
   display: flex;
   flex-wrap: wrap;
@@ -529,14 +520,6 @@ button {
   text-transform: var(--display-transform, none);
 }
 
-.next-wipe {
-  font-family: var(--font-mono);
-  font-size: 0.64rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--accent);
-}
-
 /* --------------------------------------------------------- flourishes --- */
 
 [data-project='deadwax'] .flourish {
@@ -587,6 +570,7 @@ button {
 
 /* theme-specific signatures */
 [data-theme='twilight'] .project-name {
+  font-size: clamp(2.2rem, 7vw, 5rem);
   text-shadow: 0 0 30px rgba(139, 123, 255, 0.55);
 }
 
@@ -639,52 +623,6 @@ button {
   inset: 0;
   display: none;
   pointer-events: none;
-}
-
-.curtain-label {
-  position: absolute;
-  left: 50%;
-  bottom: 2.5rem;
-  z-index: 2;
-  display: none;
-  transform: translateX(-50%);
-  white-space: nowrap;
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.34em;
-  text-transform: uppercase;
-  color: var(--fg);
-  mix-blend-mode: difference;
-}
-
-.curtain[data-phase='cover'] .curtain-label {
-  display: block;
-  animation: labelIn 0.3s 0.22s var(--ease) both;
-}
-
-.curtain[data-phase='reveal'] .curtain-label {
-  display: block;
-  animation: labelOut 0.3s var(--ease) both;
-}
-
-@keyframes labelIn {
-  from {
-    opacity: 0;
-    transform: translateX(-50%) translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-  }
-}
-
-@keyframes labelOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
 }
 
 @keyframes patternIn {

@@ -1,6 +1,5 @@
 import { Navigate, useParams } from 'react-router-dom'
 import { projects } from '../data/projects'
-import { wipeNames } from '../transitions/wipes'
 import { TransitionLink } from '../components/TransitionLink'
 
 export function ProjectPage() {
@@ -59,10 +58,6 @@ export function ProjectPage() {
             <span>Year</span>
             <strong>{project.year}</strong>
           </div>
-          <div className="meta-row">
-            <span>Transition</span>
-            <strong>{wipeNames[project.wipe]}</strong>
-          </div>
         </aside>
       </section>
 
@@ -77,12 +72,11 @@ export function ProjectPage() {
 
       <TransitionLink
         to={`/work/${next.slug}`}
-        transition={{ wipe: next.wipe, theme: next.theme, label: next.name }}
+        transition={{ wipe: next.wipe, theme: next.theme }}
         className="next-project"
       >
         <span className="next-label">Next project</span>
         <strong className="next-name">{next.name}</strong>
-        <span className="next-wipe">{wipeNames[next.wipe]} ↗</span>
       </TransitionLink>
     </main>
   )

@@ -6,13 +6,12 @@ interface CurtainProps {
   phase: Phase
   wipe: WipeId
   theme: string
-  label: string
   origin: { x: number; y: number } | null
 }
 
 type CustomProps = CSSProperties & Record<string, string | number>
 
-export function Curtain({ phase, wipe, theme, label, origin }: CurtainProps) {
+export function Curtain({ phase, wipe, theme, origin }: CurtainProps) {
   const style: CustomProps = {}
   if (origin) {
     style['--ox'] = `${origin.x}px`
@@ -33,7 +32,6 @@ export function Curtain({ phase, wipe, theme, label, origin }: CurtainProps) {
         <span key={i} className="curtain-panel" style={{ '--i': i } as CustomProps} />
       ))}
       <span className="curtain-pattern" />
-      <span className="curtain-label">{label}</span>
     </div>
   )
 }

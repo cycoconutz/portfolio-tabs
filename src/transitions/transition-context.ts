@@ -6,7 +6,6 @@ export type Phase = 'idle' | 'cover' | 'reveal'
 export interface TransitionOptions {
   wipe: WipeId
   theme: string
-  label: string
   origin?: { x: number; y: number }
 }
 
