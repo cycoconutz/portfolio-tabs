@@ -16,13 +16,7 @@ function prefersReducedMotion() {
   )
 }
 
-export function TransitionProvider({
-  children,
-  forcedTheme,
-}: {
-  children: ReactNode
-  forcedTheme?: string | null
-}) {
+export function TransitionProvider({ children }: { children: ReactNode }) {
   const navigate = useNavigate()
   const [phase, setPhase] = useState<Phase>('idle')
   const [wipe, setWipe] = useState<WipeId>('bloom')
@@ -68,12 +62,10 @@ export function TransitionProvider({
 
   const value = useMemo(() => ({ phase, transitionTo }), [phase, transitionTo])
 
-  const curtainTheme = forcedTheme ?? theme
-
   return (
     <TransitionContext.Provider value={value}>
       {children}
-      <Curtain phase={phase} wipe={wipe} theme={curtainTheme} origin={origin} />
+      <Curtain phase={phase} wipe={wipe} theme={theme} origin={origin} />
     </TransitionContext.Provider>
   )
 }
