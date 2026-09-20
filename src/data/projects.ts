@@ -206,7 +206,7 @@ export const projects: Project[] = [
     ],
     shot: ledgerShot,
     theme: 'ledger',
-    wipe: 'scanline',
+    wipe: 'stamp',
   },
 
 ]
