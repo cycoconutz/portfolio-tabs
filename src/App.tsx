@@ -1,10 +1,13 @@
-import { useLayoutEffect } from 'react'
+import { useLayoutEffect, useState } from 'react'
 import { BrowserRouter, Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import { TabSpine } from './components/TabSpine'
+import { BubblyToggle } from './components/BubblyToggle'
 import { IndexPage } from './pages/IndexPage'
 import { ProjectPage } from './pages/ProjectPage'
 import { projects } from './data/projects'
 import { TransitionProvider } from './transitions/TransitionProvider'
+
+const BUBBLY_KEY = 'catalog-bubbly'
 
 const fallback = {
   theme: 'hub',
@@ -28,19 +31,27 @@ function metaFor(pathname: string) {
   return fallback
 }
 
-function Shell() {
+function Shell({
+  bubbly,
+  onToggleBubbly,
+}: {
+  bubbly: boolean
+  onToggleBubbly: () => void
+}) {
   const { pathname } = useLocation()
   const meta = metaFor(pathname)
+  const theme = bubbly ? 'bubbly' : meta.theme
 
   useLayoutEffect(() => {
-    document.documentElement.dataset.theme = meta.theme
+    document.documentElement.dataset.theme = theme
     document.title = meta.title
     const description = document.querySelector('meta[name="description"]')
     if (description) description.setAttribute('content', meta.description)
-  }, [meta.theme, meta.title, meta.description])
+  }, [theme, meta.title, meta.description])
 
   return (
     <div className="app">
+      <BubblyToggle active={bubbly} onToggle={onToggleBubbly} />
       <TabSpine />
       <div className="stage">
         <Routes>
@@ -54,10 +65,30 @@ function Shell() {
 }
 
 export default function App() {
+  const [bubbly, setBubbly] = useState<boolean>(() => {
+    try {
+      return localStorage.getItem(BUBBLY_KEY) === '1'
+    } catch {
+      return false
+    }
+  })
+
+  const toggleBubbly = () => {
+    setBubbly((current) => {
+      const next = !current
+      try {
+        localStorage.setItem(BUBBLY_KEY, next ? '1' : '0')
+      } catch {
+        /* storage unavailable */
+      }
+      return next
+    })
+  }
+
   return (
     <BrowserRouter basename="/portfolio-tabs">
-      <TransitionProvider>
-        <Shell />
+      <TransitionProvider forcedTheme={bubbly ? 'bubbly' : null}>
+        <Shell bubbly={bubbly} onToggleBubbly={toggleBubbly} />
       </TransitionProvider>
     </BrowserRouter>
   )

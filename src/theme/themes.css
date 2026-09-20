@@ -136,3 +136,20 @@
   --display-transform: none;
   --shadow: 0 26px 60px -28px rgba(47, 125, 70, 0.4);
 }
+
+[data-theme='bubbly'] {
+  --bg: #ffe9f4;
+  --bg-2: #ffd9ec;
+  --fg: #7a2449;
+  --muted: #b36b93;
+  --accent: #ff4d9d;
+  --accent-2: #ff87c7;
+  --border: rgba(255, 77, 157, 0.28);
+  --card: rgba(255, 255, 255, 0.72);
+  --radius: 30px;
+  --font-display: 'Pacifico', cursive;
+  --font-body: 'Baloo 2', system-ui, sans-serif;
+  --font-mono: 'Baloo 2', system-ui, sans-serif;
+  --display-transform: none;
+  --shadow: 0 30px 80px -28px rgba(255, 77, 157, 0.55);
+}
