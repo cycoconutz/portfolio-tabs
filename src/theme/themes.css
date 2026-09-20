@@ -119,3 +119,20 @@
   --display-transform: none;
   --shadow: 0 26px 70px -24px rgba(190,255,59,0.35), 0 0 40px -16px rgba(255,59,235,0.28);
 }
+
+[data-theme='ledger'] {
+  --bg: #f6f3ec;
+  --bg-2: #efe9dd;
+  --fg: #1c1a17;
+  --muted: #6f6759;
+  --accent: #2f7d46;
+  --accent-2: #c2410c;
+  --border: rgba(28, 26, 23, 0.16);
+  --card: #faf8f2;
+  --radius: 6px;
+  --font-display: 'DM Serif Display', serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --display-transform: none;
+  --shadow: 0 26px 60px -28px rgba(47, 125, 70, 0.4);
+}

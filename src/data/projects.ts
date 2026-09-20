@@ -5,6 +5,7 @@ import vaultShot from '../assets/shots/vault.png'
 import solaceShot from '../assets/shots/solace.png'
 import karmaticShot from '../assets/shots/karmatic.png'
 import fluxShot from '../assets/shots/flux.png'
+import ledgerShot from '../assets/shots/ledger.png'
 
 export interface ProjectLink {
   label: string
@@ -180,6 +181,32 @@ export const projects: Project[] = [
     shot: fluxShot,
     theme: 'flux',
     wipe: 'shatter',
+  },
+  {
+    slug: 'ledger',
+    index: '07',
+    name: 'Ledger',
+    tag: 'Project',
+    year: '2026',
+    role: 'Front-end — import parser, data layer & local persistence',
+    tagline: 'A zero-backend revenue and receipt tracker.',
+    description:
+      'Ledger is a local-first tracker for small sellers. Import a CSV sales export (a Depop report drops straight in), review the revenue in a filterable table, and log expenses with a category, a label and a receipt photo. Everything is stored on-device with IndexedDB — there is no backend, no login and no account, so records never leave the browser.',
+    highlights: [
+      'Column-guessing CSV import that maps a resale export (Date of sale, Description, Total) into dated revenue rows',
+      'Filterable revenue table with running totals, category color chips and label search',
+      'Expense entries with category, label and an attached receipt image, all kept locally',
+      'IndexedDB persistence plus one-click JSON backup and restore',
+      'Zero backend and zero login — the whole app runs client-side',
+    ],
+    tech: ['JavaScript', 'HTML/CSS', 'IndexedDB', 'CSV'],
+    links: [
+      { label: 'Visit live site', href: 'https://cycoconutz.github.io/revenue-tracker/', kind: 'live' },
+      { label: 'View source', href: 'https://github.com/cycoconutz/revenue-tracker', kind: 'repo' },
+    ],
+    shot: ledgerShot,
+    theme: 'ledger',
+    wipe: 'scanline',
   },
 
 ]
