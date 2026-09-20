@@ -102,3 +102,20 @@
   --display-transform: uppercase;
   --shadow: 0 0 44px -8px rgba(57, 255, 136, 0.55);
 }
+
+[data-theme='flux'] {
+  --bg: #07090f;
+  --bg-2: #131528;
+  --fg: #f2f5ff;
+  --muted: #9aa0c2;
+  --accent: #beff3b;
+  --accent-2: #ff3beb;
+  --border: rgba(255,255,255,0.09);
+  --card: #121426;
+  --radius: 18px;
+  --font-display: 'Syne', 'Space Grotesk', sans-serif;
+  --font-body: 'Space Grotesk', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --display-transform: none;
+  --shadow: 0 26px 70px -24px rgba(190,255,59,0.35), 0 0 40px -16px rgba(255,59,235,0.28);
+}

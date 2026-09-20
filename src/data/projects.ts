@@ -4,6 +4,7 @@ import twilightShot from '../assets/shots/twilightvotes.png'
 import vaultShot from '../assets/shots/vault.png'
 import solaceShot from '../assets/shots/solace.png'
 import karmaticShot from '../assets/shots/karmatic.png'
+import fluxShot from '../assets/shots/flux.png'
 
 export interface ProjectLink {
   label: string
@@ -153,4 +154,32 @@ export const projects: Project[] = [
     theme: 'karmatic',
     wipe: 'crt',
   },
+  {
+    slug: 'flux',
+    index: '06',
+    name: 'FLUX',
+    tag: 'Arcade',
+    year: '2026',
+    role: 'Front-end — physics, audio & shaders',
+    tagline: 'Throw, pluck, and splatter — a physics-and-sound arcade.',
+    description:
+      'FLUX is a kinetic arcade built with Svelte 5, Rapier2D and the Web Audio API. Drag orbs to fling them, watch collisions become notes and paint splats, toggle gravity and black-hole mode, cycle four foil palettes, and save your splatters as PNGs. Every interaction is immediate — there is no backend, no login, and no build-time API, just canvas, WASM physics and shaders.',
+    highlights: [
+      'Svelte 5 runes + SvelteKit static — the only non-React project in the catalog to prove stack diversity',
+      'Rapier2D-compat WASM physics: dynamic bodies, restitution 0.88, pinball platforms, pointer-driven impulses',
+      'Web Audio collider: collision distance check debounced 120 ms, triangle oscillator through lowpass, quantized to pentatonic/major/minor/chromatic',
+      'Canvas paint trails: collision splats with highlight dots, translucent fade, toDataURL snapshots persisted in localStorage',
+      'Fake fluid shader: three drifting radial gradients with globalCompositeOperation lighter + grain for a breathing foil field',
+      'Six+ input modes: drag/fling, click-to-spawn, shake (Space), gravity invert (G), black hole (B), palette (1-4), paint/sound toggles, Konami code, tilt on mobile',
+    ],
+    tech: ['Svelte 5', 'SvelteKit', 'Rapier', 'Web Audio API', 'Canvas', 'Vite'],
+    links: [
+      { label: 'Visit live site', href: 'https://cycoconutz.github.io/flux/', kind: 'live' },
+      { label: 'View source', href: 'https://github.com/cycoconutz/flux', kind: 'repo' },
+    ],
+    shot: fluxShot,
+    theme: 'flux',
+    wipe: 'shatter',
+  },
+
 ]
