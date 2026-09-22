@@ -5,4 +5,7 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   base: '/portfolio-tabs/',
   plugins: [react()],
-})
+  build: {
+    cssCodeSplit: false,
+  },
+});
