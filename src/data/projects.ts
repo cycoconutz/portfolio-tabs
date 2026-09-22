@@ -6,7 +6,6 @@ import solaceShot from '../assets/shots/solace.png'
 import karmaticShot from '../assets/shots/karmatic.png'
 import fluxShot from '../assets/shots/flux.png'
 import ledgerShot from '../assets/shots/ledger.png'
-import warpbayShot from '../assets/shots/warpbay.png'
 
 export interface ProjectLink {
   label: string
@@ -209,31 +208,5 @@ export const projects: Project[] = [
     theme: 'ledger',
     wipe: 'stamp',
   },
-  {
-    slug: 'warp-bay',
-    index: '08',
-    name: 'Warp Bay Auto Lab',
-    tag: 'Newest',
-    year: '2026',
-    role: 'Full-stack — .NET API, scheduling domain, realtime board',
-    tagline: 'Neon-grade shop scheduling for a fictional flagship bay.',
-    description:
-      'Warp Bay Auto Lab is an auto-shop scheduler with a synthwave pulse. Drivers pick a service and a warp slot from a live availability grid; advisors confirm, check in and close work orders as each job moves through the shop. Every appointment carries a role-gated status trail, and double-booking a bay or a tech is refused at the database level. The whole shop — bays, techs, customers and two weeks of appointments — is seeded fictional data, with one-click demo logins so anyone can explore it without signing up.',
-    highlights: [
-      'ASP.NET Core 8 Minimal API with EF Core, JWT bearer auth and role policies (Admin, Manager, Tech, Customer)',
-      'Transactional booking guard: overlapping bay/tech slots return 409, with row-version concurrency tokens and idempotency keys',
-      'Role-gated status state machine (Requested to PickedUp) with a full audit trail of who moved what, and when',
-      'SignalR hub that pushes schedule changes to every open board, plus a hosted-service worker for reminder dispatch',
-      'Availability grid cached per service and day, with timezone-correct shop hours',
-      'Seeded demo world and one-click logins for all four roles, resettable from the UI',
-    ],
-    tech: ['C#', '.NET 8', 'EF Core', 'SQL Server', 'SignalR', 'React'],
-    links: [
-      { label: 'Visit live demo', href: 'https://cycoconutz.github.io/warp-bay/', kind: 'live' },
-      { label: 'View source', href: 'https://github.com/cycoconutz/warp-bay', kind: 'repo' },
-    ],
-    shot: warpbayShot,
-    theme: 'warpbay',
-    wipe: 'warp',
-  },
+
 ]
