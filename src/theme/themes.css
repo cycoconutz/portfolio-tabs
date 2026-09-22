@@ -136,3 +136,20 @@
   --display-transform: none;
   --shadow: 0 26px 60px -28px rgba(47, 125, 70, 0.4);
 }
+
+[data-theme='warpbay'] {
+  --bg: #0b0620;
+  --bg-2: #150a3a;
+  --fg: #e2e8f0;
+  --muted: #818cf8;
+  --accent: #22d3ee;
+  --accent-2: #f472b6;
+  --border: rgba(34, 211, 238, 0.28);
+  --card: #130b33;
+  --radius: 14px;
+  --font-display: 'Audiowide', sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --display-transform: uppercase;
+  --shadow: 0 0 70px -10px rgba(34, 211, 238, 0.45);
+}
