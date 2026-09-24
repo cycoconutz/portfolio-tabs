@@ -1,6 +1,6 @@
-export type WipeId = 'bloom' | 'scanline' | 'riso' | 'agenda' | 'crt' | 'shatter' | 'stamp' | 'warp'
+export type WipeId = 'bloom' | 'scanline' | 'riso' | 'agenda' | 'crt' | 'shatter' | 'stamp' | 'warp' | 'lull'
 
-export const wipes: WipeId[] = ['bloom', 'scanline', 'riso', 'agenda', 'crt', 'shatter', 'stamp', 'warp']
+export const wipes: WipeId[] = ['bloom', 'scanline', 'riso', 'agenda', 'crt', 'shatter', 'stamp', 'warp', 'lull']
 
 export const wipeNames: Record<WipeId, string> = {
   bloom: 'Radial bloom',
@@ -11,4 +11,5 @@ export const wipeNames: Record<WipeId, string> = {
   shatter: 'Prism shatter',
   stamp: 'Rubber stamp',
   warp: 'Warp sweep',
+  lull: 'Soft sheet drop',
 }

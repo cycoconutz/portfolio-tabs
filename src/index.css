@@ -631,6 +631,27 @@ button {
 }
 
 
+[data-project='lulla'] .flourish {
+  opacity: 0.7;
+  filter: blur(10px);
+  background: radial-gradient(
+      46rem 46rem at 14% 16%,
+      rgba(217, 164, 65, 0.5),
+      transparent 68%
+    ),
+    radial-gradient(
+      38rem 38rem at 90% 26%,
+      rgba(232, 180, 160, 0.55),
+      transparent 66%
+    ),
+    radial-gradient(
+      44rem 44rem at 62% 92%,
+      rgba(138, 169, 142, 0.4),
+      transparent 70%
+    );
+}
+
+
 [data-project='flux'] .flourish {
   opacity: 0.52;
   background:
@@ -677,6 +698,11 @@ button {
 
 [data-theme='karmatic'] .project-name {
   text-shadow: 0 0 16px rgba(57, 255, 136, 0.6);
+}
+
+[data-theme='lulla'] .project-name {
+  font-weight: 700;
+  color: var(--fg);
 }
 
 
@@ -1143,6 +1169,82 @@ button {
   }
   to {
     opacity: 1;
+  }
+}
+
+/* lull */
+.curtain[data-wipe='lull'] .curtain-panel:nth-child(1),
+.curtain[data-wipe='lull'] .curtain-panel:nth-child(2) {
+  display: block;
+}
+
+.curtain[data-wipe='lull'] .curtain-panel:nth-child(2) {
+  top: 50%;
+  height: calc(50% + 1px);
+}
+
+.curtain[data-wipe='lull'][data-phase='cover'] .curtain-panel:nth-child(1) {
+  animation: lullInA 0.6s var(--ease) both;
+}
+
+.curtain[data-wipe='lull'][data-phase='cover'] .curtain-panel:nth-child(2) {
+  animation: lullInB 0.6s 110ms var(--ease) both;
+}
+
+.curtain[data-wipe='lull'][data-phase='reveal'] .curtain-panel:nth-child(1) {
+  animation: lullOutA 0.6s var(--ease) both;
+}
+
+.curtain[data-wipe='lull'][data-phase='reveal'] .curtain-panel:nth-child(2) {
+  animation: lullOutB 0.6s 110ms var(--ease) both;
+}
+
+.curtain[data-wipe='lull'] .curtain-pattern {
+  display: block;
+  background-image: radial-gradient(rgba(255, 251, 240, 0.9) 1.6px, transparent 1.7px),
+    radial-gradient(rgba(201, 141, 116, 0.5) 1.4px, transparent 1.5px);
+  background-size: 110px 110px, 74px 74px;
+  background-position: 0 0, 31px 43px;
+  opacity: 0;
+}
+
+.curtain[data-wipe='lull'][data-phase='cover'] .curtain-pattern {
+  animation: patternIn 0.3s 0.35s var(--ease) both;
+}
+
+@keyframes lullInA {
+  from {
+    transform: translateY(-104%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes lullInB {
+  from {
+    transform: translateY(104%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes lullOutA {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-104%);
+  }
+}
+
+@keyframes lullOutB {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(104%);
   }
 }
 

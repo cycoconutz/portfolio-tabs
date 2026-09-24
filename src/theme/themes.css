@@ -153,3 +153,20 @@
   --display-transform: uppercase;
   --shadow: 0 0 70px -10px rgba(34, 211, 238, 0.45);
 }
+
+[data-theme='lulla'] {
+  --bg: #fbf7f0;
+  --bg-2: #f5efe6;
+  --fg: #3a3226;
+  --muted: #8b7f6f;
+  --accent: #d9a441;
+  --accent-2: #c98d74;
+  --border: rgba(58, 50, 38, 0.14);
+  --card: #f5efe6;
+  --radius: 18px;
+  --font-display: 'Nunito', sans-serif;
+  --font-body: 'Nunito', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --display-transform: none;
+  --shadow: 0 24px 60px -30px rgba(58, 50, 38, 0.4);
+}

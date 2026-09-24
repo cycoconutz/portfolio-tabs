@@ -7,6 +7,7 @@ import karmaticShot from '../assets/shots/karmatic.png'
 import fluxShot from '../assets/shots/flux.png'
 import ledgerShot from '../assets/shots/ledger.png'
 import warpbayShot from '../assets/shots/warpbay.png'
+import lullaShot from '../assets/shots/lulla.png'
 
 export interface ProjectLink {
   label: string
@@ -235,5 +236,32 @@ export const projects: Project[] = [
     shot: warpbayShot,
     theme: 'warpbay',
     wipe: 'warp',
+  },
+  {
+    slug: 'lulla',
+    index: '09',
+    name: 'Lulla',
+    tag: 'Project',
+    year: '2026',
+    role: 'Front-end — local-first design and PWA',
+    tagline: 'A warm, gentle tracker for the first years of family life.',
+    description:
+      'Lulla is a family-life companion for parents of babies and toddlers. It tracks feedings, sleep, diapers and growth, keeps routines and firsts, rolls it all into a week of trends and a calendar, and works offline first with anonymous backup to a Neon Postgres branch. PWA with live reminders and per-parent notes.',
+    highlights: [
+      'Local-first Dexie/IndexedDB store, fully usable offline, with anonymous cloud backup and merge',
+      'Log feeding, sleep, diaper and growth events with timers and rich sleep graphs',
+      'Seven-day stacked trends (sleep, feeding, awake) and a month calendar heatmap',
+      'Age-based guides and a mom vault: moods, pregnancy, postpartum weight and vitals, water',
+      'Lock-screen reminders via the Web Push API, plus routines, firsts and memories',
+      'PWA with install prompt, CSV export and backup/restore flows',
+    ],
+    tech: ['TypeScript', 'React', 'Vite', 'Dexie', 'IndexedDB', 'Neon'],
+    links: [
+      { label: 'Visit live app', href: 'https://cycoconutz.github.io/lulla/', kind: 'live' },
+      { label: 'View source', href: 'https://github.com/cycoconutz/lulla', kind: 'repo' },
+    ],
+    shot: lullaShot,
+    theme: 'lulla',
+    wipe: 'lull',
   },
 ]
