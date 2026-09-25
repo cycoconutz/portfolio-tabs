@@ -1285,6 +1285,10 @@ button {
     display: none;
   }
 
+  .spine-name {
+    white-space: nowrap;
+  }
+
   .spine-foot {
     display: none;
   }
