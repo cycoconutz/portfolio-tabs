@@ -257,7 +257,7 @@ export const projects: Project[] = [
     ],
     tech: ['TypeScript', 'React', 'Vite', 'Dexie', 'IndexedDB', 'Neon'],
     links: [
-      { label: 'Visit live app', href: 'https://lulla.dev/landing', kind: 'live' },
+      { label: 'Visit live app', href: 'https://lulla.dev/', kind: 'live' },
       { label: 'View source', href: 'https://github.com/cycoconutz/lulla', kind: 'repo' },
     ],
     shot: lullaShot,
