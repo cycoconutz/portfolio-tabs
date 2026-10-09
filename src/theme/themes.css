@@ -189,3 +189,20 @@
   --display-transform: none;
   --shadow: 0 24px 60px -30px rgba(58, 50, 38, 0.4);
 }
+
+[data-theme='tictactoe'] {
+  --bg: #0a0c11;
+  --bg-2: #121722;
+  --fg: #e9edf6;
+  --muted: #8792a8;
+  --accent: #63e6c8;
+  --accent-2: #ff85a1;
+  --border: #232c3d;
+  --card: #121722;
+  --radius: 14px;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: system-ui, sans-serif;
+  --font-mono: ui-monospace, monospace;
+  --display-transform: none;
+  --shadow: 0 24px 60px -30px rgba(0, 0, 0, 0.7);
+}

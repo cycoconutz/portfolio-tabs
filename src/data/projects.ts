@@ -8,6 +8,7 @@ import fluxShot from '../assets/shots/flux.png'
 import ledgerShot from '../assets/shots/ledger.png'
 import warpbayShot from '../assets/shots/warpbay.png'
 import lullaShot from '../assets/shots/lulla.png'
+import tictactoeShot from '../assets/shots/tictactoe.png'
 
 export interface ProjectLink {
   label: string
@@ -263,5 +264,31 @@ export const projects: Project[] = [
     shot: lullaShot,
     theme: 'lulla',
     wipe: 'lull',
+  },
+  {
+    slug: 'tictactoe',
+    index: '10',
+    name: 'Tic-Tac-Toe',
+    tag: 'Arcade',
+    year: '2026',
+    role: 'Front-end — game engine, AI opponent, coach',
+    tagline: 'Tic-tac-toe against an engine that never slips.',
+    description:
+      'A tic-tac-toe game against a perfect-play minimax engine that reviews every move you make. The engine plays optimally and tells you whether you found a good one, and if not, which square held. Corners are the sharpest openings because they leave the centre as the only reply that holds a draw.',
+    highlights: [
+      'Minimax engine with perfect play — never loses, only draws',
+      'Move coach that reviews every move and explains which square was better',
+      'Score tracking across rounds with win/draw/loss counts',
+      'Move log with full game history',
+      'Responsive design with a clean, dark UI',
+    ],
+    tech: ['JavaScript', 'HTML/CSS', 'Minimax'],
+    links: [
+      { label: 'Visit live site', href: 'https://cycoconutz.github.io/tic-tac-toe/', kind: 'live' },
+      { label: 'View source', href: 'https://github.com/cycoconutz/tic-tac-toe', kind: 'repo' },
+    ],
+    shot: tictactoeShot,
+    theme: 'tictactoe',
+    wipe: 'crt',
   },
 ]
