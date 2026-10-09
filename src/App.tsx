@@ -1,5 +1,5 @@
 import { useLayoutEffect } from 'react'
-import { BrowserRouter, Navigate, Route, Routes, useLocation } from 'react-router-dom'
+import { HashRouter, Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import { TabSpine } from './components/TabSpine'
 import { IndexPage } from './pages/IndexPage'
 import { ProjectPage } from './pages/ProjectPage'
@@ -55,10 +55,10 @@ function Shell() {
 
 export default function App() {
   return (
-    <BrowserRouter basename="/portfolio-tabs">
+    <HashRouter>
       <TransitionProvider>
         <Shell />
       </TransitionProvider>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
