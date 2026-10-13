@@ -661,6 +661,18 @@ button {
   filter: blur(0.5px);
 }
 
+[data-project='ironlog'] .flourish {
+  opacity: 0.5;
+  background:
+    repeating-radial-gradient(
+      circle at 82% 20%,
+      transparent 0 30px,
+      color-mix(in srgb, var(--accent) 32%, transparent) 30px 32px,
+      transparent 32px 74px
+    ),
+    repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.05) 0 2px, transparent 2px 10px);
+}
+
 [data-theme='flux'] .project-name {
   font-family: 'Syne', 'Space Grotesk', sans-serif;
   font-weight: 800;
@@ -703,6 +715,12 @@ button {
 [data-theme='lulla'] .project-name {
   font-weight: 700;
   color: var(--fg);
+}
+
+[data-theme='ironlog'] .project-name {
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: -0.01em;
 }
 
 
@@ -1389,5 +1407,67 @@ button {
   100% {
     opacity: 0;
     transform: translateX(60%);
+  }
+}
+
+/* iron */
+.curtain[data-wipe='iron'] .curtain-panel {
+  display: block;
+  inset: 0 auto 0 auto;
+  left: calc(var(--i) * 100% / 6);
+  width: calc(100% / 6 + 1px);
+  transform-origin: top center;
+}
+
+.curtain[data-wipe='iron'] .curtain-panel:nth-child(even) {
+  background: var(--wipe-bg-2);
+}
+
+.curtain[data-wipe='iron'][data-phase='cover'] .curtain-panel {
+  animation: ironIn 0.52s ease-out both;
+  animation-delay: calc(var(--i) * 46ms);
+}
+
+.curtain[data-wipe='iron'][data-phase='reveal'] .curtain-panel {
+  animation: ironOut 0.5s var(--ease) both;
+  animation-delay: calc((5 - var(--i)) * 42ms);
+}
+
+.curtain[data-wipe='iron'] .curtain-pattern {
+  display: block;
+  background-image: repeating-linear-gradient(
+    112deg,
+    rgba(255, 255, 255, 0.18) 0 2px,
+    transparent 2px 7px
+  );
+  mix-blend-mode: overlay;
+  opacity: 0;
+}
+
+.curtain[data-wipe='iron'][data-phase='cover'] .curtain-pattern {
+  animation: patternIn 0.3s 0.34s var(--ease) both;
+}
+
+@keyframes ironIn {
+  0% {
+    transform: translateY(-106%);
+  }
+  72% {
+    transform: translateY(3%);
+  }
+  86% {
+    transform: translateY(-1.5%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes ironOut {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-106%);
   }
 }

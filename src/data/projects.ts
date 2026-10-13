@@ -9,6 +9,7 @@ import ledgerShot from '../assets/shots/ledger.png'
 import warpbayShot from '../assets/shots/warpbay.png'
 import lullaShot from '../assets/shots/lulla.png'
 import tictactoeShot from '../assets/shots/tictactoe.png'
+import ironlogShot from '../assets/shots/ironlog.png'
 
 export interface ProjectLink {
   label: string
@@ -215,7 +216,7 @@ export const projects: Project[] = [
     slug: 'warp-bay',
     index: '08',
     name: 'Warp Bay Auto Lab',
-    tag: 'Newest',
+    tag: 'Project',
     year: '2026',
     role: 'Full-stack — .NET API, scheduling domain, realtime board',
     tagline: 'Neon-grade shop scheduling for a fictional flagship bay.',
@@ -290,5 +291,32 @@ export const projects: Project[] = [
     shot: tictactoeShot,
     theme: 'tictactoe',
     wipe: 'crt',
+  },
+  {
+    slug: 'ironlog',
+    index: '11',
+    name: 'IronLog',
+    tag: 'Newest',
+    year: '2026',
+    role: 'Full-stack — Spring Boot API, React SPA, single Docker image',
+    tagline: 'A strength-training log that turns sessions into volume, streaks and records.',
+    description:
+      'IronLog is a workout tracker for lifters. Log a session exercise by exercise — sets, reps, weight, RPE — and it rolls everything up into weekly volume, muscle-group splits, streaks and per-lift personal records. A seeded catalog of 65 movements, a debounced picker, editable history and a records board close the loop. One Spring Boot API and a React SPA ship as a single Docker image backed by managed Postgres.',
+    highlights: [
+      'Spring Boot REST API with Spring Security JWT auth and JPA over PostgreSQL',
+      'Volume, muscle-split and streak analytics computed server-side and charted client-side',
+      'Personal-record board with estimated 1RM and per-lift progress history',
+      '65 seeded exercises plus a debounced, muscle-filtered picker for building sessions',
+      'Single-image deploy: the Maven build compiles the React SPA into the jar and serves it from Spring',
+      'Dockerized and shipped to Render against a managed Neon Postgres database',
+    ],
+    tech: ['Java 21', 'Spring Boot', 'Spring Security', 'JPA', 'PostgreSQL', 'React', 'TypeScript', 'Vite', 'Docker'],
+    links: [
+      { label: 'Visit live app', href: 'https://ironlog-llgm.onrender.com/', kind: 'live' },
+      { label: 'View source', href: 'https://github.com/cycoconutz/ironlog', kind: 'repo' },
+    ],
+    shot: ironlogShot,
+    theme: 'ironlog',
+    wipe: 'iron',
   },
 ]

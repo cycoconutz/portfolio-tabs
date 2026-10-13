@@ -206,3 +206,20 @@
   --display-transform: none;
   --shadow: 0 24px 60px -30px rgba(0, 0, 0, 0.7);
 }
+
+[data-theme='ironlog'] {
+  --bg: #0a0c10;
+  --bg-2: #12161d;
+  --fg: #eef2f7;
+  --muted: #8a94a3;
+  --accent: #ff5a1f;
+  --accent-2: #3fb0ff;
+  --border: rgba(255, 255, 255, 0.09);
+  --card: #141922;
+  --radius: 4px;
+  --font-display: 'Barlow Condensed', 'Archivo Black', sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --display-transform: uppercase;
+  --shadow: 0 24px 60px -26px rgba(255, 90, 31, 0.45);
+}
