@@ -27,6 +27,7 @@ export interface Project {
   tagline: string
   description: string
   highlights: string[]
+  proof?: Array<{ value: string; label: string }>
   tech: string[]
   links: ProjectLink[]
   shot: string
@@ -41,19 +42,27 @@ export const projects: Project[] = [
     name: 'Deadwax',
     tag: 'Latest',
     year: '2026',
-    role: 'Full-stack — design, client, API, database',
-    tagline: 'A risograph-printed vinyl marketplace, built end to end.',
+    role: 'Full-stack: design, client, API, database, payments',
+    tagline: 'A risograph-printed vinyl marketplace with a checkout that cannot oversell.',
     description:
-      "Deadwax is a full-stack marketplace for second-hand records. Buyers browse a full-text catalog, filter by genre, condition and decade, add sleeves to a crate, and check out through a transactional payment flow. Sellers get fulfillment dashboards with per-item status, inline price and stock editing. Buyers review delivered records; an admin back office moderates the whole shop. Payments are simulated — cards ending in 0002 decline.",
+      "Deadwax is a full-stack marketplace for second-hand records. Buyers browse a full-text catalog, filter by genre, condition and decade, add sleeves to a crate, and pay through Stripe's Payment Element. Sellers get fulfillment dashboards with per-item status and inline price and stock editing, buyers review delivered records, and the admin back office shows the payment plumbing: webhook events, the delivery queue and its dead letters. The checkout is built around the failure it used to have: two buyers racing for the last copy could both buy it.",
     highlights: [
-      'Fastify 5 API with Drizzle ORM over PostgreSQL, behind a node:crypto session layer with httpOnly cookies',
-      'Postgres full-text search (websearch_to_tsquery) with ranked results, filters, five sort modes and pagination',
-      'Transactional checkout: stock decrement, simulated payment record, cart clear, all in one commit',
-      'Seller fulfillment state machine that recomputes order status as each line item ships',
-      'Verified reviews gated on delivered orders, rolling up into per-listing ratings',
-      'Admin summary, user, listing and review moderation routes behind a role hook',
+      'Checkout claims stock with a conditional update inside one transaction: twenty buyers racing for the last copy produce one order and nineteen 409s',
+      'Stripe test payments through Payment Element, with order metadata and an idempotency key on every PaymentIntent, and no card data reaching the server',
+      'Signed webhooks recorded in the same transaction as the state change, so a replayed event answers duplicate:true and changes nothing',
+      'Transactional outbox for receipts and seller notices, with exponential backoff, dead letters and delivery that cannot duplicate',
+      'Postgres full-text search with ranked results, filters, five sort modes and pagination',
+      'OpenTelemetry spans across checkout, webhook and worker, with the trace id on the response and in the logs',
     ],
-    tech: ['TypeScript', 'React', 'Fastify', 'PostgreSQL', 'Drizzle ORM', 'Zod'],
+    proof: [
+      { value: '1 of 20', label: 'checkouts win the last copy' },
+      { value: '1 of 5', label: 'webhook deliveries, one transition' },
+      { value: '0', label: 'duplicate charges or rows' },
+      { value: 'p95 5 ms', label: 'at 50 rps, 1,500 requests' },
+      { value: '0.2 s', label: 'warm start, was 32.75 s' },
+      { value: '27', label: 'tests, CI on every push' },
+    ],
+    tech: ['TypeScript', 'React', 'Fastify', 'PostgreSQL', 'Drizzle ORM', 'Stripe', 'OpenTelemetry', 'Vitest'],
     links: [
       { label: 'Visit live demo', href: 'https://deadwax-exee.onrender.com/', kind: 'live' },
       { label: 'View source', href: 'https://github.com/cycoconutz/deadwax', kind: 'repo' },

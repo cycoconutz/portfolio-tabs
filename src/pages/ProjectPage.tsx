@@ -78,6 +78,20 @@ export function ProjectPage() {
         </aside>
       </section>
 
+      {project.proof && (
+        <section className="project-proof">
+          <p className="section-kicker">Proof</p>
+          <ul>
+            {project.proof.map((item) => (
+              <li key={item.label}>
+                <strong>{item.value}</strong>
+                <span>{item.label}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
       <section className="project-highlights">
         <p className="section-kicker">Highlights</p>
         <ul>

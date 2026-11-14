@@ -525,6 +525,60 @@ button {
   font-weight: 500;
 }
 
+.project-proof {
+  position: relative;
+  z-index: 1;
+  margin-top: 4rem;
+}
+
+.project-proof ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid var(--border);
+  background: var(--border);
+}
+
+@media (max-width: 900px) {
+  .project-proof ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .project-proof ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-proof li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: 1.4rem;
+  background: var(--bg);
+}
+
+.project-proof strong {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--accent);
+}
+
+.project-proof span {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.16em;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
 .project-highlights {
   margin-top: 4.5rem;
 }
