@@ -10,7 +10,7 @@ export function IndexPage() {
           The Catalog
         </h1>
         <p className="index-lede">
-          Eleven builds, eleven identities. Every project below gets its own design language and its
+          Twelve builds, twelve identities. Every project below gets its own design language and its
           own way of arriving on screen. Pick a tab and watch the page turn.
         </p>
       </header>

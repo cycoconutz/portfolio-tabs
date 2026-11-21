@@ -223,3 +223,20 @@
   --display-transform: uppercase;
   --shadow: 0 24px 60px -26px rgba(255, 90, 31, 0.45);
 }
+
+[data-theme='checklist'] {
+  --bg: #fbfaf6;
+  --bg-2: #f2efe7;
+  --fg: #16130f;
+  --muted: #6b665c;
+  --accent: #059669;
+  --accent-2: #e11d48;
+  --border: #e3dfd4;
+  --card: #ffffff;
+  --radius: 10px;
+  --font-display: 'Geist', sans-serif;
+  --font-body: 'Geist', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --display-transform: none;
+  --shadow: 0 24px 60px -30px rgba(22, 19, 15, 0.25);
+}

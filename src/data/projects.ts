@@ -10,6 +10,7 @@ import warpbayShot from '../assets/shots/warpbay.png'
 import lullaShot from '../assets/shots/lulla.png'
 import tictactoeShot from '../assets/shots/tictactoe.png'
 import ironlogShot from '../assets/shots/ironlog.png'
+import checklistShot from '../assets/shots/checklist.png'
 
 export interface ProjectLink {
   label: string
@@ -305,7 +306,7 @@ export const projects: Project[] = [
     slug: 'ironlog',
     index: '11',
     name: 'IronLog',
-    tag: 'Newest',
+    tag: 'Project',
     year: '2026',
     role: 'Full-stack — Spring Boot API, React SPA, single Docker image',
     tagline: 'A strength-training log that turns sessions into volume, streaks and records.',
@@ -327,5 +328,32 @@ export const projects: Project[] = [
     shot: ironlogShot,
     theme: 'ironlog',
     wipe: 'iron',
+  },
+  {
+    slug: 'checklist',
+    index: '12',
+    name: 'Checklist',
+    tag: 'Newest',
+    year: '2026',
+    role: 'Full-stack: client, server actions, database, Web Push',
+    tagline: 'Shared checklists with no accounts: send a link, everyone edits.',
+    description:
+      'Checklist is a shared-checklist PWA with no accounts and no passwords. Make a list, send the invite link, and everyone can add, change and complete tasks together with drag-and-drop ordering, priorities, assignees and due dates. Every mutation lands in an audit trail that survives task deletion, members can mute notifications per event, and the whole thing installs as a PWA with Web Push. A Next.js 16 App Router app over Drizzle and Neon serverless Postgres.',
+    highlights: [
+      'Invite links are the access model: idempotent to re-follow, and rotating the token instantly revokes every outstanding link',
+      'Session cookie stores only the sha256 hash of the token, httpOnly; the raw secret never touches the database',
+      'Drag-and-drop reorder validated server-side: every task id is checked against the list and the dragged subset is replayed into existing position slots, with optimistic client updates and rollback',
+      'Web Push that excludes the actor, honors per-list per-event mute toggles, prunes dead endpoints, sends task titles only, and is fire-and-forget so a push can never fail a write',
+      'SWR polling plus focus revalidation, with server order always winning over an in-flight drag',
+      'Six sort modes plus status, priority and assignee filters, all synced to the URL as shareable views',
+    ],
+    tech: ['TypeScript', 'Next.js 16', 'React 19', 'Drizzle ORM', 'Neon', 'Web Push', 'Tailwind CSS'],
+    links: [
+      { label: 'Visit live app', href: 'https://checklist-cyco.vercel.app/', kind: 'live' },
+      { label: 'View source', href: 'https://github.com/cycoconutz/checklist', kind: 'repo' },
+    ],
+    shot: checklistShot,
+    theme: 'checklist',
+    wipe: 'stamp',
   },
 ]
